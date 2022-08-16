@@ -1,11 +1,11 @@
-### How the API works
+## How the API works
 Sending a post request to the `/predict_iris` URI with the desired iris 
 parameters in json format yields the prediction.
 ### Iris Parameters
 `sepal_length_in_cm`, `sepal_width_in_cm`, `petal_length_in_cm`, 
 `petal_width_in_cm`
 
-### How to test
+## How to test
 
 #### 1.Build docker container
 From the root folder, build the image  
