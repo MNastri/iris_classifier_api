@@ -4,13 +4,16 @@ parameters in json format yields the prediction.
 ### Iris Parameters
 `sepal_length_in_cm`, `sepal_width_in_cm`, `petal_length_in_cm`, 
 `petal_width_in_cm`
-### Build docker container
+###How to test
+#### 1.Build docker container
 From the root folder, build the image  
 `docker build --tag python-iris .`
-### Run container
+#### 2.Run container
 Run the detached container exposing the port 5000  
 `docker run -d -p 5000:5000 python-iris`
-### Example
+#### 3.Send a post request to the exposed port
+
+#### Example
     import requests
     local_URI = f"http://127.0.0.1:5000/predict_iris"
     payload = {
