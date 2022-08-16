@@ -10,3 +10,17 @@ From the root folder, build the image
 ### Run container
 Run the detached container exposing the port 5000  
 `docker run -d -p 5000:5000 python-iris`
+### Example
+    import requests
+    local_URI = f"http://127.0.0.1:5000/predict_iris"
+    payload = {
+        "sepal_length_in_cm": 6.4,
+        "sepal_width_in_cm": 3.2,
+        "petal_length_in_cm": 5.3,
+        "petal_width_in_cm": 2.3,
+    }
+    response = requests.post(local_URI, json=payload)
+    print('response from server:', response.text)
+Running the above code results in  
+    
+    response from server: "virginica"
